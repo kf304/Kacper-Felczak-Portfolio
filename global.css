@@ -1,0 +1,136 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b1120;
+  color: #e2e8f0;
+}
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  background: radial-gradient(circle at top, rgba(56,189,248,0.18), transparent 32%),
+              radial-gradient(circle at 80% 10%, rgba(145,0,255,0.14), transparent 22%),
+              #020617;
+  line-height: 1.6;
+}
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 96px 24px 72px;
+}
+#home h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  max-width: 900px;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+#home p {
+  max-width: 680px;
+  margin: 1.75rem auto 0;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  box-shadow: 0 18px 40px rgba(37,99,235,0.18);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 60px rgba(37,99,235,0.24);
+}
+.btn-secondary {
+  background: rgba(148,163,184,0.18);
+  color: #f8fafc;
+}
+.section-block {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.what-i-do,
+.featured-work {
+  padding: 80px 24px;
+}
+.what-i-do h2,
+.featured-work h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.skills-grid,
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.skill-box {
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.12);
+  border-radius: 26px;
+  padding: 2rem;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+.skill-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(37,99,235,0.4);
+}
+.skill-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #f8fafc;
+}
+.skill-box p {
+  margin: 0;
+  color: #cbd5e1;
+}
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+@media (max-width: 720px) {
+  #home {
+    padding: 72px 18px 54px;
+  }
+  .what-i-do,
+  .featured-work {
+    padding: 60px 18px;
+  }
+}
+.project-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+}
