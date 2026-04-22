@@ -1,9 +1,270 @@
-    <div class="topnav">
-        <a href="home.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-    </div>
+<div class="topnav">
+    <a href="home.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</div>
 
-<h1>About Me</h1>
-<p>Hello! I'm a web developer based in [Location]. I love creating beautiful and functional websites.</p>
+<div>
+    <h1>
+        About Me
+    </h1>
+    <p>Passionate developer with a love for creating
+        elegant solutions to complex problems.
+    </p>
+</div>
+<!--Bio Section -->
+<div>
+    <div>
+        <div>
+            <img src="/images/grad-pic.jpeg"
+                alt="Workspace" git>
+        </div>
+    </div>
+    <div>
+        <h2>
+            My Journey
+        </h2>
+        <div>
+            <p>
+                I'm a passionate developer with over 6 years of
+                experience building web applications and digital
+                experiences. My journey in tech started with a
+                curiosity about how websites work, and it has
+                evolved into a career I truly love.
+            </p>
+            <p>
+                I specialize in creating user-friendly,
+                performant applications using modern
+                technologies. I believe in writing clean,
+                maintainable code and always staying up-to-date
+                with the latest industry trends and best
+                practices.
+            </p>
+            <p>
+                When I'm not coding, you can find me
+                contributing to open-source projects, writing
+                technical blog posts, or exploring new
+                technologies. I'm always eager to learn and take
+                on new challenges.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div>
+            <div>
+                <h2>
+                    Skills & Expertise
+                </h2>
+            </div>
+            <div>
+                <h3>
+                    skill
+                </h3>
+                <ul>
+                    <li>
+                        Skills & Expertise
+                    </li>
+                    <li>
+                        skill
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        {/* Experience Section */}
+        <div>
+            <div className="flex items-center justify-center mb-12">
+                <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
+                <h2 className="text-3xl text-gray-900">
+                    Experience
+                </h2>
+            </div>
+            <div className="space-y-8">
+                {experience.map((job, index) => (
+                <div key={index}
+                    className="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 className="text-2xl text-gray-900">
+                                {job.title}
+                            </h3>
+                            <p className="text-blue-600">
+                                {job.company}
+                            </p>
+                        </div>
+                        <p className="text-gray-500 mt-2 md:mt-0">
+                            {job.period}
+                        </p>
+                    </div>
+                    <p className="text-gray-600">
+                        {job.description}
+                    </p>
+                </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Education Note */}
+        <div className="mt-20 text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <GraduationCap className="h-8 w-8 text-blue-600" />
+            </div>
+            <h3 className="text-2xl mb-2 text-gray-900">
+                Continuous Learning
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+                I'm committed to continuous learning and
+                professional development. Whether it's through
+                online courses, conferences, or personal projects,
+                I'm always expanding my knowledge and skills.
+            </p>
+        </div> {/* Skills Section */}
+        <div className="mb-20">
+            <div className="flex items-center justify-center mb-12">
+                <Award className="h-8 w-8 text-blue-600 mr-3" />
+                <h2 className="text-3xl text-gray-900">
+                    Skills & Expertise
+                </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {skills.map((skillGroup) => (
+                <div key={skillGroup.category} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <h3 className="text-xl mb-4 text-gray-900">
+                        {skillGroup.category}
+                    </h3>
+                    <ul className="space-y-2">
+                        {skillGroup.items.map((skill) => (
+                        <li key={skill} className="text-gray-600 flex items-center">
+                            <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            {skill}
+                        </li>
+                        ))}
+                    </ul>
+                </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Experience Section */}
+        <div>
+            <div className="flex items-center justify-center mb-12">
+                <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
+                <h2 className="text-3xl text-gray-900">
+                    Experience
+                </h2>
+            </div>
+            <div className="space-y-8">
+                {experience.map((job, index) => (
+                <div key={index}
+                    className="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 className="text-2xl text-gray-900">
+                                {job.title}
+                            </h3>
+                            <p className="text-blue-600">
+                                {job.company}
+                            </p>
+                        </div>
+                        <p className="text-gray-500 mt-2 md:mt-0">
+                            {job.period}
+                        </p>
+                    </div>
+                    <p className="text-gray-600">
+                        {job.description}
+                    </p>
+                </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Education Note */}
+        <div className="mt-20 text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <GraduationCap className="h-8 w-8 text-blue-600" />
+            </div>
+            <h3 className="text-2xl mb-2 text-gray-900">
+                Continuous Learning
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+                I'm committed to continuous learning and
+                professional development. Whether it's through
+                online courses, conferences, or personal projects,
+                I'm always expanding my knowledge and skills.
+            </p>
+        </div> {/* Skills Section */}
+        <div className="mb-20">
+            <div className="flex items-center justify-center mb-12">
+                <Award className="h-8 w-8 text-blue-600 mr-3" />
+                <h2 className="text-3xl text-gray-900">
+                    Skills & Expertise
+                </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {skills.map((skillGroup) => (
+                <div key={skillGroup.category} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <h3 className="text-xl mb-4 text-gray-900">
+                        {skillGroup.category}
+                    </h3>
+                    <ul className="space-y-2">
+                        {skillGroup.items.map((skill) => (
+                        <li key={skill} className="text-gray-600 flex items-center">
+                            <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            {skill}
+                        </li>
+                        ))}
+                    </ul>
+                </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Experience Section */}
+        <div>
+            <div className="flex items-center justify-center mb-12">
+                <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
+                <h2 className="text-3xl text-gray-900">
+                    Experience
+                </h2>
+            </div>
+            <div className="space-y-8">
+                {experience.map((job, index) => (
+                <div key={index}
+                    className="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 className="text-2xl text-gray-900">
+                                {job.title}
+                            </h3>
+                            <p className="text-blue-600">
+                                {job.company}
+                            </p>
+                        </div>
+                        <p className="text-gray-500 mt-2 md:mt-0">
+                            {job.period}
+                        </p>
+                    </div>
+                    <p className="text-gray-600">
+                        {job.description}
+                    </p>
+                </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Education Note */}
+        <div className="mt-20 text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <GraduationCap className="h-8 w-8 text-blue-600" />
+            </div>
+            <h3 className="text-2xl mb-2 text-gray-900">
+                Continuous Learning
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+                I'm committed to continuous learning and
+                professional development. Whether it's through
+                online courses, conferences, or personal projects,
+                I'm always expanding my knowledge and skills.
+            </p>
+        </div>
